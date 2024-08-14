@@ -32,11 +32,17 @@ const { title, description } = Astro.props;
 	}
 	html {
 		font-family: 'Onest Variable',system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 	body {
 		background: #050505;
 		display: flex;
 		min-height: 100vh;
 		flex-direction: column
+	}
+	@media(prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>
