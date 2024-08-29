@@ -1,46 +1,45 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Badge from '../components/Badge.astro'
-import LinkedInIcon from '../components/icons/LinkedIn.astro'
-import SocialPill from '../components/SocialPill.astro'
-import GitHubIcon from '../components/icons/GitHub.astro'
-import MailIcon from '../components/icons/Mail.astro'
-import SectionContainer from '../components/SectionContainer.astro'
-import CodeIcon from '../components/icons/Code.astro'
-import Projects from '../components/Projects.astro'
-import Footer from '../components/Footer.astro'
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
 ---
-<Layout title="Portfolio de Gerson - Desarrollador y programador web" description='Contrata a Gerson para crear tu aplicación web. Desarrollador web. Especializado en crear aaplicaciones únicas.'>
-	<main class="px-4">
-		<SectionContainer class='py-44 pb-32'>
-			<img
-			class="rounded-full size-12 mb-4"
-			src="https://static-cdn.jtvnw.net/jtv_user_pictures/5a72c3d9-424a-40a6-bf23-73370cd85578-profile_image-300x300.png"
-			alt="I photo" />
-				<h1 class="text-3xl md:text-4xl lg:text-5xl text-white font-bold flex  flex-row gap-x-4 pb-6 lg:pb-10">
-					Hey, soy Gerson <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/gerson-emanuel-garcia-roman-031866234" class="flex justify-center items-center">
-							<Badge>Disponible para trabajar</Badge></a>
-				</h1>
-				<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">Desarrollador Web de <span class="text-red-100/90">México.</span> <span class="opacity-70">Especalizado en crear aplicaciones únicas</span></h2>
-				<nav class="flex gap-4 mt-8 flex-wrap">
-					<SocialPill href='https://www.linkedin.com/in/gerson-emanuel-garcia-roman-031866234'>
-						<LinkedInIcon class="size-4	md:size-6" /> LinkedIn
-					</SocialPill>
-					<SocialPill href="https://github.com/GersonGarciaKatowhu">
-						<GitHubIcon class="size-4	md:size-6"/>GitHub
-					</SocialPill>
-					<SocialPill href='mailto:garcia.roman.gerson@gmail.com'>
-						<MailIcon  class="size-4	md:size-6"/>garcia.roman.gerson@gmail.com
-					</SocialPill>
-				</nav>
-			</SectionContainer>
-			<SectionContainer id='projects'>
-				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-					<CodeIcon class='size-7'/>
-					Proyectos
-				</h2>
-				<Projects />
-			</SectionContainer>
-	</main>
-	<Footer />
+
+<Layout
+  title="Porfolio de Emanuel - Desarrollador y Programador Web"
+  description="Contrata a Emanuel para crear tu aplicación web. Desarrollador Web. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>
