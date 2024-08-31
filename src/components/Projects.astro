@@ -4,6 +4,8 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import React from "./icons/React.astro"
+import DB from "./icons/DB.astro"
 
 const TAGS = {
   NEXT: {
@@ -16,24 +18,58 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  REACT: {
+    name: "React",
+    class: "bg-[#61DAFB] text-black",
+    icon: React,
+  },
+  DATABASE: {
+    name: "LocalStorage",
+    class: "bg-[#003159] text-white",
+    icon: DB,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "Shopping Tech",
+    description: "Desarrollé una aplicación en la que aprendí a filtrar datos y manejar estados interdependientes de manera eficiente. La aplicación incluye una tienda donde puedes seleccionar productos y agregarlos a una canasta. Para gestionar la complejidad de los estados, implementé useReducer, lo que me permitió aplicar y fortalecer mis habilidades en la gestión avanzada de estados en React.",
+    link: "https://shoppingcartkatowhu.netlify.app/",
+    image: "/projects/shoppingTech.jpg",
+    tags: [TAGS.REACT],
+    github: "https://github.com/GersonGarciaKatowhu/shopping-cart-products",
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Daily Planner",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Una aplicación que permite gestionar tus tareas y utilizar un temporizador Pomodoro para organizar períodos de trabajo y descansos. Desarrollada con React, enfrenté desafíos al manejar múltiples estados, los cuales resolví eficazmente implementando React Context y custom hooks, lo que mejoró la escalabilidad y mantenibilidad del proyecto.",
+    link: "https://dailykatowhu.netlify.app/",
+    image: "/projects/daily.jpg",
+    tags: [TAGS.REACT],
+    github: "https://github.com/GersonGarciaKatowhu/daily",
+  },
+  {
+    title: "Gatos Random",
+    description: "Una aplicación que permite solicitar un dato aleatorio, el cual se presenta junto con una imagen relacionada. El principal desafío fue integrar dos APIs interdependientes para obtener la información, lo cual resolví utilizando React para manejar la lógica de dependencias y sincronización de datos.",
+    link: "https://catsandfactskatowhu.netlify.app/",
+    image: "/projects/gatoRandom.jpg",
+    tags: [TAGS.REACT],
+    github: "https://github.com/GersonGarciaKatowhu/gatosRandom",
+  },
+  {
+    title: "Review Books",
+    description: "Una aplicación personal desarrollada para almacenar y organizar información sobre libros, incluyendo detalles sobre dónde encontrarlos. Actualmente, estoy planeando añadir funcionalidades de autenticación y almacenamiento de datos utilizando Supabase para.",
+    link: "https://reviewbooks.netlify.app/",
+    image: "/projects/crudBooks.jpg",
+    tags: [TAGS.REACT],
+    github: "https://github.com/GersonGarciaKatowhu/crudBooks",
+  },
+  {
+    title: "App Citas - Agenda de Citas",
+    description:
+      "Una aplicación de gestión de citas desarrollada desde cero con React. Durante el desarrollo, enfrenté desafíos en la gestión de estados y la implementación de localStorage, lo que me permitió profundizar en estos conceptos y mejorar mis habilidades en React.",
+    link: "https://citasreactkatowhu.netlify.app/",
+    image: "/projects/citasReact.jpg",
+    tags: [TAGS.DATABASE, TAGS.REACT],
   },
 ]
 ---
